@@ -22,7 +22,7 @@ export default function Contact() {
         e.preventDefault();
         setLoading(true);
         try{
-            const res = await axios.post("http://localhost:5000/save",formData);
+            const res = await axios.post("https://rajabanni-server.vercel.app/",formData);
 
             if(res.data && res.data.success){
                 toast.success("Message sent successfully!");
