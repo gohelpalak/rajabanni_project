@@ -1,17 +1,3 @@
-// import React from 'react'
-
-
-// export default function About() {
-// return (
-// <section id="about" className="about">
-// <div className="container">
-// <h2>About Rajbanni</h2>
-// <p>Rajbanni began with a love for traditional textiles and an eye for modern silhouettes. We combine craft and comfort to deliver pieces that celebrate femininity and heritage.</p>
-// </div>
-// </section>
-// )
-// }
-
 import React from 'react'
 
 export default function About() {
@@ -64,7 +50,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <a className="btn btn-primary text-uppercase px-5 py-3" href>Read More</a>
+        {/* <a className="btn btn-primary text-uppercase px-5 py-3" href>Read More</a> */}
       </div>
     </div>
   </div>

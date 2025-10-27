@@ -1,47 +1,8 @@
-// import React from 'react'
-
-
-// export default function Hero() {
-// return (
-// <section id="home" className="hero">
-// <div className="container hero-inner">
-// <div className="hero-copy">
-// <h1>Rajbanni — Classic Textiles, Timeless Style</h1>
-// <p>Handpicked sarees, lehengas and kurtis crafted with love. Elegant designs and premium fabrics for your special moments.</p>
-// <div className="hero-cta">
-// <a href="#products" className="btn btn-primary">Shop Collection</a>
-// <a href="#about" className="btn btn-outline">Our Story</a>
-// </div>
-// </div>
-
-
-// <div className="hero-media">
-// <img src="/images/1.jpeg" alt="Rajbanni textile" />
-// </div>
-// </div>
-// </section>
-// )
-// }
 import React from 'react'
 
 export default function Hero() {
   return (
-    // <section id="home" className="hero">
-    //   <div className="container hero-inner">
-    //     <div className="hero-copy">
-    //       <h1>Rajbanni — Classic Textiles, Timeless Style</h1>
-    //       <p>Handpicked sarees, lehengas and kurtis crafted with love. Elegant designs and premium fabrics for your special moments.</p>
-    //       <div className="hero-cta">
-    //         <a href="#products" className="btn btn-primary">Shop Collection</a>
-    //         <a href="#about" className="btn btn-outline">Our Story</a>
-    //       </div>
-    //     </div>
-    //     <div className="hero-media">
-    //       <img src="https://images.pexels.com/photos/3806451/pexels-photo-3806451.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Rajbanni Hero" />
-    //     </div>
-    //   </div>
-    // </section>
-    <>
+     <>
     <div>
   <div class="container-fluid p-0 hero-header bg-light mb-5" id='Hero'>
   <div className="container p-0">

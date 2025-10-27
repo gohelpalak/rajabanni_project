@@ -1,48 +1,77 @@
 import React, { useState } from 'react'
 import { toast } from 'react-toastify';
 import axios from 'axios';
-
-
 export default function Contact() {
-
     const [formData,setFormData] = useState({
         name: '',
         email: '',
         subject: '',
         message: ''
     })
-
     const [loading,setLoading] = useState(false);
-
     const handleChange = (e)=>{
         setFormData((p)=>({...p,[e.target.name]:e.target.value}))      
     }
 
-    const handleSubmit = async(e)=>{
-        e.preventDefault();
-        setLoading(true);
-        try{
-            const res = await axios.post("https://rajabanni-server.vercel.app/save",formData);
+    // const handleSubmit = async(e)=>{
+    //     e.preventDefault();
+    //     setLoading(true);
+    //     try{
+    //         // const res = await axios.post("https://rajabanni-server.vercel.app/save",formData);
 
-            if(res.data && res.data.success){
-                toast.success("Message sent successfully!");
-                setFormData({
-                    name: '',
-                    email: '',
-                    subject: '',
-                    message: ''
-                })
-            }else{
-                toast.error("Failed to send message!");
-            }
-        }catch(err){
-            console.log(err);
-            toast.error("Something went wrong!");
-        } finally{
-            setLoading(false);
-        }
+    //               const res = await axios.post("http://localhost:5000/save",formData);
+
+    //         if(res.data && res.data.success){
+    //             toast.success("Message sent successfully!");
+    //             setFormData({
+    //                 name: '',
+    //                 email: '',
+    //                 subject: '',
+    //                 message: ''
+    //             })
+    //         }else{
+    //             toast.error("Failed to send message!");
+    //         }
+    //     }catch(err){
+    //         console.log(err);
+    //         toast.error("Something went wrong!");
+    //     } finally{
+    //         setLoading(false);
+    //     }
+    // }
+
+    const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+
+  try {
+    // 🔹 Send form data to backend
+    const res = await axios.post("http://localhost:5000/save", formData);
+
+    if (res.data && res.data.success) {
+      toast.success("Message sent successfully!");
+
+      // ✅ Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+
+      // ✅ Automatically trigger Excel download
+      // Open export URL in a new tab
+      window.open("http://localhost:5000/export", "_blank");
+    } else {
+      toast.error("Failed to send message!");
     }
-
+  } catch (err) {
+    console.error(err);
+    toast.error("Something went wrong!");
+  } finally {
+    setLoading(false);
+  }
+};
     return (
         <>
             <div id='Contact' className="container-fluid py-5">

@@ -1,30 +1,3 @@
-// import React from 'react'
-
-
-// const REVIEWS = [
-// { id: 1, name: 'Meera', text: 'Beautiful quality and fast delivery. Loved my saree!' },
-// { id: 2, name: 'Rina', text: 'Lehenga fit was perfect, so many compliments.' },
-// { id: 3, name: 'Sonal', text: 'Kurti fabric is so soft and the print is lovely.' }
-// ]
-
-
-// export default function Reviews() {
-// return (
-// <section id="reviews" className="reviews">
-// <div className="container">
-// <h2>Customer Reviews</h2>
-// <div className="reviews-grid">
-// {REVIEWS.map(r => (
-// <div className="review-card" key={r.id}>
-// <div className="review-name">{r.name}</div>
-// <div className="review-text">"{r.text}"</div>
-// </div>
-// ))}
-// </div>
-// </div>
-// </section>
-// )
-// }
 
 import React from 'react'
 
